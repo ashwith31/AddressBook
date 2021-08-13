@@ -40,16 +40,21 @@ public class AddressBookMain {
 	 */
 	public static void displayContacts() {
 		int n=1;
-		System.out.println("Displaying all contacts");
+		System.out.println("Your contacts are:");
 		for(Contacts contacts :person)
 		{
 			System.out.print(n+")");
 			System.out.println(contacts);
 			n++;
 		}
+		System.out.println(" ");
 	}
+
+/*
+ * This method is used to edit the contacts. 	
+ */
 	
-	public static void editContacts() {
+public static void editContacts() {
 		System.out.println("In the edit");
 		System.out.println("Enter your first name:");
 		String s=sc.next();
