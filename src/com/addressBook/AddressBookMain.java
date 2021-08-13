@@ -94,14 +94,23 @@ public static void editContacts() {
 			}
 		}
 	}
+	public static void deleteContact(){
+			System.out.println("Enter your First Name");
+			String s=sc.next();
+			for(Contacts contacts:person){
+				if(contacts.getFirstName().equals(s)) {
+					person.remove(contacts);
+				}
+			}
+	}
 	public static void main(String[] args) {
 		System.out.println("Welcome to Address Book Program");
 		boolean b=true;
 		while(b){
-			System.out.println("Press 1 to Add a contact. ");
-			System.out.println("Press 2 to Edit Contact");
-			System.out.println("Press 3 to Display contacts. ");
-			
+			System.out.println("Press 1 to Add a contact.");
+			System.out.println("Press 2 to Edit Contact.");
+			System.out.println("Press 3 to Delete contact");
+			System.out.println("Press 4 to Display contacts");
 			System.out.println("Press 0 to exit");
 			int option=sc.nextInt();
 			switch(option) {
@@ -112,6 +121,9 @@ public static void editContacts() {
 				editContacts();
 				break;
 			case 3:
+				deleteContact();
+				break;
+			case 4:
 				displayContacts();
 				break;
 			case 0:
