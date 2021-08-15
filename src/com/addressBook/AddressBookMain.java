@@ -50,11 +50,11 @@ public class AddressBookMain {
 		System.out.println(" ");
 	}
 
-/*
- * This method is used to edit the contacts. 	
- */
+	/*
+	 * This method is used to edit the contacts. 	
+	 */
 	
-public static void editContacts() {
+	public static void editContacts() {
 		System.out.println("In the edit");
 		System.out.println("Enter your first name:");
 		String s=sc.next();
@@ -94,12 +94,20 @@ public static void editContacts() {
 			}
 		}
 	}
+	/*
+	 * This method is for deleting a contact.
+	 */
 	public static void deleteContact(){
 			System.out.println("Enter your First Name");
+			// stores user input's first name
 			String s=sc.next();
 			for(Contacts contacts:person){
 				if(contacts.getFirstName().equals(s)) {
 					person.remove(contacts);
+					System.out.println("Deleted sucessfully.");
+				}
+				else {
+					System.out.println("Invalid first name");
 				}
 			}
 	}
@@ -133,5 +141,6 @@ public static void editContacts() {
 				break;
 			}
 		}
+		sc.close();
 	}
 }
