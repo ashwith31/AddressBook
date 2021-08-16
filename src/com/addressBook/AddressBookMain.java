@@ -3,7 +3,10 @@ package com.addressBook;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
+/*
+ * Program to implement Address Book System.
+ * @autor Ashwith
+ */
 public class AddressBookMain {
 	static Scanner sc=new Scanner(System.in);
 	static List<Contacts> person=new ArrayList<Contacts>();
@@ -41,15 +44,13 @@ public class AddressBookMain {
 	public static void displayContacts() {
 		int n=1;
 		System.out.println("Your contacts are:");
-		for(Contacts contacts :person)
-		{
+		for(Contacts contacts :person){
 			System.out.print(n+")");
 			System.out.println(contacts);
 			n++;
 		}
 		System.out.println(" ");
 	}
-
 	/*
 	 * This method is used to edit the contacts. 	
 	 */
@@ -87,7 +88,7 @@ public class AddressBookMain {
 				break;
 				default:
 					break;
-				}
+					}
 				}
 			else {
 				System.out.println("Invalid option");
