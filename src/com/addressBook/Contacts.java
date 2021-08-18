@@ -10,7 +10,6 @@ public class Contacts {
 	    private String state;
 	    private long phoneNumber;
 	    private int zip;
-
 		/*
 		 * Using a constructor to set the values to the variables.
 		 */
@@ -23,7 +22,6 @@ public class Contacts {
 	        this.phoneNumber = phoneNumber;
 	        this.zip = zip;
 	    }
-
 	    /*
 	     * Using Getters and Setters to get and set the values
 	     */
